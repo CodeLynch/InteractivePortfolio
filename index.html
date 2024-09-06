@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>John Vergil Aparri</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
+    </head>
+    <div id="world">
+        <div 
+        id="logo"
+        style="
+        left: 830px;
+        top: 558px;
+        ">
+            <img width=580px;
+            height=210px;
+            src="assets/myLogoBG.gif">
+            </img>
+        </div>    
+        <div 
+        id="subtextMsg"
+        class="blinkText"
+        style="
+            position: absolute;
+            top:800px;
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+            width: fit-content;
+            font-family: 'Press Start 2P';
+            color: white;
+            ">
+            Lorem Ipsum!
+        </div>
+        <div class="block" style="
+            width: 736px; 
+            height: 1120px; 
+            left: 0px;
+            bottom:0px;
+            border-left:0px;
+            border-bottom: 0px;">
+        </div>
+        <div class="block" style="
+            width: 736px; 
+            height: 1120px; 
+            right: 0px;
+            bottom:0px;
+            border-bottom: 0px;
+            border-right: 0px;">
+        </div>
+        <a class="block warp has-href" title="My Projects" style="left:200px; top:15px; width:200px; height:195px;" href="projects.html">
+            <div class="block door"></div>
+        </a>
+        <div 
+        style="
+            position: absolute;
+            top:950px;
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+            width: fit-content;
+            font-family: 'Press Start 2P';
+            color: white;
+            ">
+            &copy; CodeLynch 2024
+        </div>
+        <div id="jva" style="left:1085px; top:844px;">JVA</div>
+        <div id="dialogueBox" class="textBox">
+            <div style="width: 30%; display:flex; justify-content: end;">
+                <img id="me" style="--n:5.8s" class="talksprite" src="assets/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
+            </div>
+            <div class="dialoguePart" style="height: 136px; width:700px;">
+                <div style="width: 100%; display: flex; justify-content: end;">
+                    <span class="closeButton" onclick="closeDialogueBox()"> X </span>
+                </div>
+                <div style="overflow-x:hidden; max-height: 100%;">
+                    <span class="dtext type" style="--n:123; font-size: 20px;">
+                        Hi, I'm John Vergil Aparri. Welcome to my interactive portfolio!
+                        You can move me by pressing W,A,S,D to explore my website.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</html>

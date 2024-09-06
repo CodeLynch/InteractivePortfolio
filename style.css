@@ -1,0 +1,184 @@
+#world {
+    position: relative;
+    height:1600px; 
+    width: 2240px;
+    margin:auto auto 0; 
+    background-color: black;
+    outline: 2px solid cyan;
+}
+
+#logo{
+    position: relative;
+    z-index: 2;
+}
+
+#jva{
+    position: absolute;
+    z-index: 2;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    line-height: 3;
+    color: white;
+    background: hotpink;
+    outline: 1px solid cyan;
+}
+
+#jva[data-key-s=true]{
+    line-height: 4;
+}
+#jva[data-key-w=true]{
+    line-height: 1;
+}
+#jva[data-key-a=true]{
+    text-align: left;
+}
+#jva[data-key-d=true]{
+    text-align: right;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+html{
+    margin: 0;
+}
+
+
+.block {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: black; 
+    border: solid 2px cyan;
+}
+
+.warp {
+    display: block;
+    background: purple;
+    width: 96px;
+    height: 70px;
+    border-bottom: 4px solid red;
+}
+
+.warp .door {
+    width:95px;
+    background: magenta;
+    height: 82px;
+    bottom: 0px;
+    left:64px;
+    z-index: 4;
+}
+
+.warp::after {
+	font: 12px;
+    font-family: "Press Start 2P";
+	content: attr(title);
+	position: absolute;
+	display: block;
+	bottom: -45px;
+	color: cyan;
+	width: 300px;
+	text-align: center;
+	left: -45px;
+}
+
+.talksprite {
+	transition: ease-out;
+	animation: talk var(--n) infinite;
+	animation-iteration-count: 1;
+}
+
+@keyframes talk {
+	from {content:url(assets/meportrait.gif)}
+	to {content:url(assets/meportrait.gif)}
+}
+
+.dialoguePart{
+	width: 100%;
+	display: inline-block;
+	border:solid 3px magenta; 
+	border-width: 3px 3px 3px 0px; 
+	padding: 0em .5em .5em .5em;
+	background-color: black;
+	overflow-y: hidden;
+
+}
+.closeButton{
+	font-family: 'Silkscreen'; 
+	color: magenta; 
+	cursor: pointer;
+	font-size: 24px;
+	margin: 0px 2px 2px 2px;
+}
+
+.closeButton:hover{
+	color: aquamarine;
+}
+
+.dtext {
+	font-family: "Silkscreen";
+	color: #0000;
+	font-size: 14px;
+	line-height: 1.5;
+	background:
+	  linear-gradient(-90deg,magenta 5px,#0000 0) 10px 0,
+	  linear-gradient(magenta 0 0) 0 0;
+	background-size:calc(var(--n)*1ch) 200%;
+	-webkit-background-clip:padding-box, text;
+	background-clip:padding-box, text;
+	background-repeat:no-repeat;
+}
+
+.type {
+    animation: 
+      b .7s infinite steps(1),   
+      t calc(var(--n)*.05s) steps(var(--n)) forwards;
+    -moz-animation: 
+        b .7s infinite steps(1),   
+        t calc(var(--n)*.05s) steps(var(--n)) forwards; /* Firefox */
+    -webkit-animation: 
+        b .7s infinite steps(1),   
+        t calc(var(--n)*.05s) steps(var(--n)) forwards; /* Safari and Chrome */
+    -o-animation: 
+        b .7s infinite steps(1),   
+        t calc(var(--n)*.05s) steps(var(--n)) forwards; /* Opera */
+  }
+  @keyframes t{
+    from {background-size:0 200%}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0}
+  }
+
+
+.textBox {
+    display: flex; 
+    height: 25%; 
+    width: 50vw;
+    position: fixed;
+    z-index: 3;
+    bottom: -10px;
+    left: 375px;
+    animation: fly 1s ease-out;
+    
+}
+@keyframes fly {
+    0%   { 
+    transform: translateY(200%); 		
+    }
+    100% { 
+    transform: translateY(0%); 
+    }
+}
+
+.blinkText {
+    animation: blink 1.4s step-start infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
