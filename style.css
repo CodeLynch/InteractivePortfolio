@@ -17,24 +17,55 @@
     z-index: 2;
     width: 64px;
     height: 64px;
-    text-align: center;
-    line-height: 3;
     color: white;
-    background: hotpink;
-    outline: 1px solid cyan;
+    background-image: url(assets/jvaSpriteSheet.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+}
+@keyframes walkDown {
+    from {background-position: -64px ;}
+    to {background-position: -192px ;}
+}
+@keyframes walkUp {
+    from {background-position: -448px ;}
+    to {background-position: -576px ;}
+}
+@keyframes walkLeft {
+    from {background-position: -640px ;}
+    to {background-position: -768px ;}
 }
 
+@keyframes walkRight {
+    from {background-position: -256px ;}
+    to {background-position: -384px;}
+}
+
+
 #jva[data-key-s=true]{
-    line-height: 4;
+    animation: walkDown .4s steps(2) infinite;
+}
+#jva[data-moving="false"][data-lastdir="s"]{
+    background-position: 0 0;
 }
 #jva[data-key-w=true]{
-    line-height: 1;
+    animation: walkUp .4s steps(2) infinite;
 }
+#jva[data-lastdir="w"]{
+    background-position: -384px;
+}
+
 #jva[data-key-a=true]{
-    text-align: left;
+    animation: walkLeft .4s steps(2) infinite;
 }
+#jva[data-lastdir="a"]{
+    background-position: -576px;
+}
+
 #jva[data-key-d=true]{
-    text-align: right;
+    animation: walkRight .4s steps(2) infinite;
+}
+#jva[data-lastdir="d"]{
+    background-position: -192px;
 }
 
 body {
@@ -98,7 +129,7 @@ html{
 .dialoguePart{
 	width: 100%;
 	display: inline-block;
-	border:solid 3px magenta; 
+	border:solid 3px cyan; 
 	border-width: 3px 3px 3px 0px; 
 	padding: 0em .5em .5em .5em;
 	background-color: black;
@@ -107,7 +138,7 @@ html{
 }
 .closeButton{
 	font-family: 'Silkscreen'; 
-	color: magenta; 
+	color: cyan; 
 	cursor: pointer;
 	font-size: 24px;
 	margin: 0px 2px 2px 2px;
@@ -123,8 +154,8 @@ html{
 	font-size: 14px;
 	line-height: 1.5;
 	background:
-	  linear-gradient(-90deg,magenta 5px,#0000 0) 10px 0,
-	  linear-gradient(magenta 0 0) 0 0;
+	  linear-gradient(-90deg,cyan 5px,#0000 0) 10px 0,
+	  linear-gradient(cyan 0 0) 0 0;
 	background-size:calc(var(--n)*1ch) 200%;
 	-webkit-background-clip:padding-box, text;
 	background-clip:padding-box, text;

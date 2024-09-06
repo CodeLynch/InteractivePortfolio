@@ -191,6 +191,7 @@ document.addEventListener("keydown", function(event){
 document.addEventListener("keyup", function(event){
     currentKeys[event.key] = false;
     jva.setAttribute("data-key-" + event.key, false);
+    jva.setAttribute("data-lastdir", event.key);
 })
 
 window.addEventListener("load",  function(){
@@ -212,7 +213,8 @@ var msgArray = [
     "Programmer Extraordinaire!",
     "Hello World!",
     "Have you heard of Shibuya Kei?",
-    "日本語のものはどれも美的です"
+    "日本語のものはどれも美的です",
+    "idk man",
   ];
 var randomNum = Math.floor(Math.random() * msgArray.length);
 document.getElementById("subtextMsg").innerHTML = msgArray[randomNum];
