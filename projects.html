@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title>My Projects | John Vergil Aparri</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <marquee>Hello World</marquee>
+    <div id="world">
+        <a class="block warp has-href" title="Go Back" style="background-color:transparent; border: none; position: absolute; left:1010px; top:20px;" href="index.html">
+            <div class="block door"></div>
+        </a>
+        <div id="jva" style="left:1085px; top:100px;"></div>
+        <div id="dialogueBox" class="textBox">
+            <div style="width: 30%; display:flex; justify-content: end;">
+                <img id="me" style="--n:4s" class="talksprite" src="assets/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
+            </div>
+            <div class="dialoguePart" style="height: 136px; width:700px;">
+                <div style="width: 100%; display: flex; justify-content: end;">
+                    <span class="closeButton" onclick="closeDialogueBox()"> X </span>
+                </div>
+                <div style="overflow-x:hidden; max-height: 100%;">
+                    <span class="dtext type" style="--n:77; font-size: 20px;">
+                        These are the projects I've worked on, it's not much but it's an honest work.
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    <script src="functions.js"></script>
+    <script>
+        window.addEventListener("load",  function(){
+        window.scroll(360, 0);
+        gameLoop();
+    })</script>
 </body>
 </html>

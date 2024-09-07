@@ -100,12 +100,14 @@ function checkCollisions(){
             (colliding.right = true);
         }
 
-        if(obstacle.classList.contains("has-href") && isCollide(jvaPoints, blockPoints)){
-            console.log(jvaPoints.bottom, blockPoints.top, " so jvaPoints.bottom < blockPoints.top+3:",jvaPoints.bottom < blockPoints.top+3 )
-        }
-
         if(obstacle.classList.contains("door") &&  
-        jvaPoints.top < blockPoints.bottom+5 ){
+        jvaPoints.top < blockPoints.bottom + 5 &&
+        jvaPoints.left < blockPoints.right-32 &&
+        jvaPoints.right > blockPoints.left+32 &&
+        jvaPoints.bottom > blockPoints.top ){
+            console.log(jvaPoints.right, "and ", blockPoints.left, " so ", jvaPoints.right > blockPoints.left 
+                , "while ", jvaPoints.left, "and ", blockPoints.right, " so ", jvaPoints.left < blockPoints.right
+            );
             enterDoor = true;
         }
 
@@ -116,7 +118,6 @@ function checkCollisions(){
         jvaPoints.right < blockPoints.right+8 &&
         !isWarping){
             isWarping = true;
-            console.log("this has href;")
             obstacle.click();
         }
     })
@@ -194,9 +195,20 @@ document.addEventListener("keyup", function(event){
     jva.setAttribute("data-lastdir", event.key);
 })
 
+
 window.addEventListener("load",  function(){
     window.scroll(360, 510);
     gameLoop();
+})
+
+var doors = document.querySelectorAll('a.has-href');
+
+doors.forEach((door, i)=>{
+    door.addEventListener("click", (event)=>{
+        event.preventDefault();
+        hideJVA();
+        window.location = door.href;
+    })
 })
 
 
