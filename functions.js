@@ -105,9 +105,6 @@ function checkCollisions(){
         jvaPoints.left < blockPoints.right-32 &&
         jvaPoints.right > blockPoints.left+32 &&
         jvaPoints.bottom > blockPoints.top ){
-            console.log(jvaPoints.right, "and ", blockPoints.left, " so ", jvaPoints.right > blockPoints.left 
-                , "while ", jvaPoints.left, "and ", blockPoints.right, " so ", jvaPoints.left < blockPoints.right
-            );
             enterDoor = true;
         }
 
@@ -134,6 +131,7 @@ function checkCollisions(){
     } 
     if( colliding.left){
         canMoveRight = false;
+   
     }else{
         canMoveRight = true;
     }
@@ -197,7 +195,7 @@ document.addEventListener("keyup", function(event){
 
 
 window.addEventListener("load",  function(){
-    window.scroll(360, 510);
+    window.scroll(0, 510);
     gameLoop();
 })
 

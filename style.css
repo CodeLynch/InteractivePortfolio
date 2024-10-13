@@ -4,11 +4,18 @@ html{
     margin: 0px;
     padding: 0px;
     overflow: visible;
+    font-family: 'Press Start 2P';
+}
+
+body{
+    background: url(assets/bgtile.png);
+    background-size: 128px 128px; 
+    animation: scroll 30s linear infinite;    
 }
 #world {
     position: relative;
     height:1600px; 
-    width: 2240px;
+    width:1156px;
     margin:auto auto 0; 
     background-color: black;
     outline: 2px solid cyan;
@@ -18,9 +25,9 @@ html{
     position: relative;
     z-index: 2;
     background: url(assets/myLogoBG.gif);
-    width: 580px;
-    height: 210px;
-    background-size: 580px 210px;
+    width: 448px;
+    height: 192px;
+    background-size: 448px 192px;
 }
 
 #jva{
@@ -97,10 +104,7 @@ body {
     position: absolute;
     width: 32px;
     height: 32px;
-    background: url(assets/bgtile.png);
-    background-size: 128px 128px; 
     border: solid 2px cyan;
-    animation: scroll 30s linear infinite;
 }
 
 .warp {
@@ -184,7 +188,7 @@ body {
       b .7s infinite steps(1),   
       t calc(var(--n)*.05s) steps(var(--n)) forwards;
     -moz-animation: 
-        b .7s infinite steps(1),   
+        b .4s infinite steps(1),   
         t calc(var(--n)*.05s) steps(var(--n)) forwards; /* Firefox */
     -webkit-animation: 
         b .7s infinite steps(1),   
@@ -202,14 +206,12 @@ body {
 
 
 .textBox {
-    display: flex; 
-    height: 25%; 
-    width: 50vw;
+    display: flex;
     position: fixed;
     z-index: 3;
-    bottom: -10px;
-    left: 375px;
+    bottom: 10px;;
     animation: fly 1s ease-out;
+    left: 10px;
     
 }
 @keyframes fly {

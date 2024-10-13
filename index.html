@@ -7,12 +7,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
     </head>
+    <body>
     <div id="world">
         <div 
         id="logo"
         style="
-        left: 830px;
-        top: 558px;
+        left: 354px;
+        top: 570px;
         ">
         </div>    
         <div 
@@ -30,33 +31,16 @@
             ">
             Lorem Ipsum!
         </div>
-        <div class="block" style="
-            width: 704px; 
-            height: 1120px; 
-            left: 0px;
-            bottom:0px;
-            border-left:0px;
-            border-bottom: 0px;">
-        </div>
-        <div class="block" style="
-            width: 704px; 
-            height: 1120px; 
-            right: 0px;
-            bottom:0px;
-            border-bottom: 0px;
-            border-right: 0px;">
-        </div>
-        <a class="block warp has-href" title="My Projects" style="left:200px; top:15px; width:200px; height:195px;" href="projects.html">
+        <a class="block warp has-href" title="My Projects" style="left:64px; top:15px; width:200px; height:195px;" href="projects.html">
             <div class="block door"></div>
         </a>
-        <a class="block warp has-href" title="About Me" style="right:200px; top:15px; width:200px; height:195px;" href="about.html">
+        <a class="block warp has-href" title="About Me" style="right:64px; top:15px; width:200px; height:195px;" href="about.html">
             <div class="block door"></div>
         </a>
-        
         <div 
         style="
             position: absolute;
-            top:950px;
+            top:930px;
             left: 0; 
             right: 0; 
             margin-inline: auto; 
@@ -66,22 +50,23 @@
             ">
             &copy; CodeLynch 2024
         </div>
-        <div id="jva" style="left:1085px; top:844px;"></div>
+        <div id="jva" style="left:544px; top:844px;"></div>
         <div id="dialogueBox" class="textBox">
-            <div style="width: 30%; display:flex; justify-content: end;">
-                <img id="me" style="--n:4.5s" class="talksprite" src="assets/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
+            <div style="width: 170px; display:flex; justify-content: end;">
+                <img id="me" style="--n:6.2s" class="talksprite" src="assets/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
             </div>
             <div class="dialoguePart" style="height: 136px; width:700px;">
                 <div style="width: 100%; display: flex; justify-content: end;">
                     <span class="closeButton" onclick="closeDialogueBox()"> X </span>
                 </div>
                 <div style="overflow-x:hidden; max-height: 100%;">
-                    <span class="dtext type" style="--n:95; font-size: 20px;">
+                    <span class="dtext type" style="--n:190; font-size: 20px;">
                         Welcome to my interactive portfolio! You can move me by pressing W,A,S,D to explore my website.
                     </span>
                 </div>
             </div>
         </div>
     </div>
+    </body>
     <script src="functions.js"></script>
 </html>
