@@ -195,7 +195,6 @@ document.addEventListener("keyup", function(event){
 
 
 window.addEventListener("load",  function(){
-    window.scroll(0, 510);
     gameLoop();
 })
 

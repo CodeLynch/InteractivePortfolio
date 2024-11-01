@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects | John Vergil Aparri</title>
     <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="world"
     style="
-        height:1600px; 
+        height:2196px; 
         width: 1156px;
         ">
         <a class="block warp has-href" title="Go Back" style="width: 200px; height: 80px; background-color:transparent; position: absolute; right:0px; top:20px; border: none;" href="index.html">
@@ -22,26 +22,87 @@
         </a>
         <div id="jva" style="
         left:1024px; 
-        top:52px;"></div>
-        <h1 style="color: cyan; position: absolute; left: 65px; top: 135px;">My Projects</h1>
+        top:52px;"
+        ></div>
+        <div style="position: absolute; left: 65px; top: 135px; display: flex; align-items: center;">
+            <img src="assets/projectIcon.png" height="50px" width="50px"/>
+            <h1 style="color: cyan; margin: 0px 15px;">My Projects</h1>
+        </div>
+
+        <!-- DataMate -->
         <div class="block" style="
             width: 896px; 
             height: auto; 
             left: 64px;
             top: 200px;
             padding: 20px;">
-            <h2 style="color: cyan; margin: 0px;">DataMate</h2>
-            <span style="color:cyan; font-family: 'Silkscreen'; font-size: 12px;">Repository:</span><br/>
-            <span style="color:cyan; font-family: 'Silkscreen'; font-size: 12px;">Front-end</span><br/>    
-            <span style="color:cyan; font-family: 'Silkscreen'; font-size: 12px;">Back-end</span>
+            <h2 class="ProjectHeader">DataMate</h2>
+            <span class="ProjectLink">Repository:</span>
+            <a target="_blank" href="https://github.com/CodeLynch/DataMate_Frontend" class="ProjectLink">Front-end</a>
+            <a target="_blank" href="https://github.com/CodeLynch/DataMate_Backend" class="ProjectLink">Back-end</a>
             <div style="display: flex; width: 100%; gap: 20px; justify-content: center; margin: 20px 0px 20px 0px;">
-                <img src="assets/DataMate/DMHome.PNG" style="height: 200px; width: 320px; background-color: hotpink;"/>
-                <img src="assets/DataMate/DMLogin.PNG" style="height: 200px; width: 320px; background-color: hotpink;"/>
+                <img src="assets/DataMate/DMHome.PNG" class="projectImg"/>
+                <img src="assets/DataMate/DMLogin.PNG" class="projectImg"/>
             </div>
-            <span style="color:cyan; font-family: 'Silkscreen'; font-size: 16px;">
-                My Capstone group project for my final year in college. <span style="color:hotpink">DataMate</span> is meant to help <span style="color:hotpink">MSMEs (Micro Small Medium Enterprises)</span> transition from using logbooks and spreadsheets to a secure database and manage their data efficiently. 
+            <span class="ProjectDesc">
+                My Capstone group project for my final year in college. <span style="color:hotpink">DataMate</span> is meant to help <span style="color:hotpink">MSMEs (Micro Small Medium Enterprises)</span> transition from using logbooks and spreadsheets to a secure database and manage their data efficiently. This is done by allowing the user to upload their spreadsheet to the webapp and it will map the data and create a database in the webapp.
             </span> 
         </div>
+
+        <!-- Light Speed Gunner -->
+        <div class="block" style="
+            width: 896px; 
+            height: auto; 
+            left: 64px;
+            top: 718px;
+            padding: 20px;">
+            <h2 class="ProjectHeader">Light Speed Gunner</h2>
+            <a target="_blank" href="https://retrovii.itch.io/lightspeed-gunner" class="ProjectLink">Game Page</a>
+            <div style="display: flex; width: 100%; gap: 20px; justify-content: center; margin: 20px 0px 20px 0px;">
+                <img src="assets/LSG/title.gif" class="projectImg"/>
+                <img src="assets/LSG/select.gif" class="projectImg"/>
+            </div>
+            <span class="ProjectDesc">
+                A <span style="color:hotpink">Cyberpunk shooter platformer</span> where you play as the titular<span style="color:hotpink"> Light Speed Gunner</span>, a bounty hunter in a world of high-tech and low-life. 
+                Made with Unity and the first build is currently published and playable on the browser at itch.io. 
+            </span> 
+        </div>
+
+        <!-- 2FA App -->
+        <div class="block" style="
+            width: 896px; 
+            height: auto; 
+            left: 64px;
+            top: 1192px;
+            padding: 20px;">
+            <h2 class="ProjectHeader">2FA App</h2>
+            <a target="_blank" href="https://github.com/CodeLynch/2FA-App" class="ProjectLink">Repository</a>
+            <div style="display: flex; width: 100%; gap: 20px; justify-content: center; margin: 20px 0px 20px 0px;">
+                <img src="assets/2FA-App/2Flogin.PNG" class="projectImg"/>
+                <img src="assets/2FA-App/2Fotp.PNG" class="projectImg"/>
+            </div>
+            <span class="ProjectDesc">
+                A simple project that has a login and a <span style="color:hotpink">Two-factor authentication</span> feature. I built this project since I needed a simple app to create Test and design documents around for a college course and to practice <span style="color:hotpink">React</span> and <span style="color:hotpink">Node.js (specifically Express.js)</span> for the frontend and backend respectively.    
+            </span> 
+        </div>
+
+        <!-- Jolen -->
+        <div class="block" style="
+        width: 896px; 
+        height: auto; 
+        left: 64px;
+        top: 1697px;
+        padding: 20px;">
+        <h2 class="ProjectHeader">Jolen!</h2>
+        <a target="_blank" href="https://retrovii.itch.io/jolen" class="ProjectLink">Game Page</a>
+        <div style="display: flex; width: 100%; gap: 20px; justify-content: center; margin: 20px 0px 20px 0px;">
+            <img src="assets/Jolen/jolenss1.png" class="projectImg"/>
+            <img src="assets/Jolen/jolenss.png" class="projectImg"/>
+        </div>
+        <span class="ProjectDesc">
+            A Game project I made for the <span style="color:hotpink">Buwan ng Wika 2024 Game Jam</span> hosted at itch.io. A golf game inspired by a classic <span style="color:hotpink">Filipino game</span>. Built with Unity and playable with the browser at itch.io.    
+        </span> 
+    </div>
 
 
         
@@ -50,13 +111,13 @@
             <div style="width: 170px; display:flex; justify-content: end;">
                 <img id="me" style="--n:5s" class="talksprite" src="assets/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
             </div>
-            <div class="dialoguePart" style="height: 136px; width:700px;">
+            <div class="dialoguePart" style="height: 149px; width:700px;">
                 <div style="width: 100%; display: flex; justify-content: end;">
                     <span class="closeButton" onclick="closeDialogueBox()"> X </span>
                 </div>
                 <div style="overflow-x:hidden; max-height: 100%;">
                     <span class="dtext type" style="--n:100; font-size: 20px;">
-                        These are the projects I've worked on, it's not much but it's an honest work.
+                        These are some of the projects I've worked on, it's not much but it's an honest work.
                     </span>
                 </div>
             </div>
@@ -67,8 +128,7 @@
     <script src="functions.js"></script>
     <script>
         window.addEventListener("load",  function(){
-        window.scroll(360, 0);
-        gameLoop();
+        window.scroll(0, 0);
     })</script>
 </body>
 </html>
